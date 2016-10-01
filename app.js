@@ -16,12 +16,12 @@ $(document).ready(function() {
 		e.preventDefault();
 
 		var contact1 = Object.create(Contact);
-		contact1.firstName = $('#firstName');
-		contact1.lastName = $('#lastName');
-		contact1.phone = $('#phone');
-		contact1.street = $('#street');
-		contact1.city = $('#city');
-		contact1.state = $('#state');
+		contact1.firstName = $('#firstName').val();
+		contact1.lastName = $('#lastName').val();
+		contact1.phone = $('#phone').val();
+		contact1.street = $('#street').val();
+		contact1.city = $('#city').val();
+		contact1.state = $('#state').val();
 
 		contacts.push(contact1);
 
@@ -29,4 +29,8 @@ $(document).ready(function() {
 			'<a href="">' + $('#firstName').val() + '</a>' + '</span>' + '</li>');
 		$('.contactForm').children('input').val(" ");
 	});
+
+	$('li').click(function(e){
+		$('viewInfo').Contact.show();
+	})
 });
