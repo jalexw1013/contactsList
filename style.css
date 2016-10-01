@@ -1,0 +1,39 @@
+body {
+  padding-left: 30px;
+  font-size: 16px;
+  font-family: 'Roboto', helvetica, sans-serif;
+}
+
+
+h1 {
+  font-size: 25px;
+}
+
+
+.contactForm label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contactForm input, .contactForm select {
+  display: block;
+  width: 250px;
+  margin-bottom: 15px;
+}
+
+.contactForm input {
+  padding: 3px;
+}
+
+.contactForm select {
+  cursor: pointer;
+}
+
+.contactForm button {
+  width: 150px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+  margin-bottom: 20px;
+}
