@@ -9,24 +9,36 @@
 		<form class='contactForm'>
 			<h1>Contacts</h1>
  			<h3>Add A Contact</h3>
- 			<label for="firstName">First name</label>
+ 			<label for="firstName" required>First name</label>
         		<input type="text" name='firstName' id='firstName' class='field'/>
 
 			<label for="lastName">Last name</label>
 				<input type="text" name='lastName' id='lastName' class='field' />
 
-			<label for="phone" required>Phone Number</label>
-				<input type='tel' name='phone' id='phone' class='field' />
 
-			<label for="street">Street</label>
-				<input type="text" name='street' id='street' class='field' />
+			<div id="phoneNumb">
+				<label for="phone" required>Phone Number</label><button class='additionalInfo' id='addPhone'>Add Phone Number</button>
+					<input type='tel' name='phone' id='phone' class='field' />
+			</div>
+			
+			
 
-			<label for="city">City</label>
-				<input type="text" name='city' id='city' class='field' />
+			<span id="newPhone"></span>
 
-			<label for="state">State</label>
-				<input type="text" name='state' id='state' class='field' />
-    		<button type='submit' id='submit'>Add</button>
+			<div id="addAdd">
+				<label for="street" required>Street</label>
+					<input type="text" name='street' id='street' class='field' />
+
+				<label for="city" required>City</label>
+					<input type="text" name='city' id='city' class='field' />
+
+				<label for="state">State</label>
+					<input type="text" name='state' id='state' class='field' />
+    		</div>
+
+    		<span id="newAddress"></span>
+
+    		<button class='additionalInfo' id='addAddress'>Add Address</button><button type='submit' id='submit'>Add Contact</button>
     	</form>
 
     	<section style="display: Box;" class='contacts'>
@@ -37,9 +49,7 @@
     	</section>
     </div>
 
-    <div class="view info" id="contactShow">
-    	<h3>Contact Information</h3>
-    </div>
+    <div class="view info" id="contactShow"></div>
 
 
     <script src="http://code.jquery.com/jquery.min.js"></script>

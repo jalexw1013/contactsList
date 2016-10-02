@@ -9,6 +9,10 @@ h1 {
   font-size: 25px;
 }
 
+#phoneNumb label {
+  display: inline-block;
+  margin-right: 20px;
+}
 
 .contactForm label {
   display: block;
@@ -29,13 +33,23 @@ h1 {
   cursor: pointer;
 }
 
-.contactForm button {
+.additionalInfo {
+  background-color: blue;
+  color: white;
   width: 150px;
   padding: 10px;
   cursor: pointer;
-  background-color: blue;
-  color: white;
   margin-bottom: 20px;
+  border-radius: 15px 15px 15px 15px;
+}
+
+#submit {
+  width: 150px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: gray;
+  margin-bottom: 20px;
+  border-radius: 15px 15px 15px 15px;
 }
 
 #contactShow {
