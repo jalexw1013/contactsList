@@ -1,5 +1,6 @@
 var contacts = [];
 var addresses = [];
+var phones = [];
 
 var contactNumber = 0;
 var addressNumber = 0;
@@ -52,12 +53,24 @@ function addPhone() {
 }
 
 function showContact(contactIndex) {
+	var addressString = '';
+	for (i=0;i<addresses.length;i++){
+		addressString += addresses.street[i];
+		addressString += addresses.city[i];
+		addressString += addresses.state[i];
+	};
+
+	phoneString = '';
+	for (i=0; i<phones.length;i++){
+		phoneString += phones[i];
+	};
+
     var currentContact = contacts[contactIndex];
     $('#contactShow').html("<b>" + "<h2>" + currentContact.firstName + "</h2>" + "</b>" + "<br>"
     					 + currentContact.firstName + "<br>"
                          + currentContact.lastName + "<br>"
-                         + currentContact.phone + "<br>"
-                         + currentContact.address);
+                         + currentContact.phoneString + "<br>"
+                         + currentContact.addressString);
 }
 
 $(document).ready(function() {
@@ -68,8 +81,6 @@ $(document).ready(function() {
 		console.log(addressCounter);
 	});
 
-	
-
 	$('#addPhone').click(function(e){
 		e.preventDefault();
 		addPhone();
@@ -79,28 +90,25 @@ $(document).ready(function() {
 		e.preventDefault();
 
 		var contact1 = Object.create(Contact);
+		var address = Object.create(Address);
 
-		for (i=0; i<addressCounter; i++){
-			var address = Object.create(Address);
-			address[i].street = $('#street').val();
-			address[i].city = $('#city').val();
-			address[i].state = $('#state').val();
-			address[i].push(addresses);
+		for (i=0; i<=addressCounter; i++){
+			address.street[i] = $('#street').val();
+			address.city[i] = $('#city').val();
+			address.state[i] = $('#state').val();
+			address.push(addresses);
 		};
 
 		for (i=0; i<phoneCounter; i++){
 			phone[i] = $('#phone').val();
-			phone[i].push(contact1.phone);
-		}
+			phone[i].push(phones);
+		};
 
 		contact1.firstName = $('#firstName').val();
 		contact1.lastName = $('#lastName').val();
-		contact1.address = addresses;
 		
-
 		contacts.push(contact1);
 		var contactNumber = contacts.length;
-
 
 		$('#contactList').append('<li>' + '<span class="info">' + '<a href="javascript:void(0)" onClick="showContact(' + (contactNumber - 1) + ');">' + contact1.firstName + '</a>' + '</span>' + '</li>');
 
