@@ -1,22 +1,17 @@
 var contacts = [];
-var addresses = [];
-var phones = [];
-
-var contactNumber = 0;
-var addressNumber = 0;
 
 var Address = {
 	street: "",
 	city: "",
-	state: "",
-}
+	state: ""
+};
 
 var Contact = {
 	firstName: "",
 	lastName: "",
 	phone: [],
-	address: [],
-}
+	address: []
+};
 
 addressCounter = 0;
 
@@ -53,24 +48,34 @@ function addPhone() {
 }
 
 function showContact(contactIndex) {
-	var addressString = '';
-	for (i=0;i<addresses.length;i++){
-		addressString += addresses.street[i];
-		addressString += addresses.city[i];
-		addressString += addresses.state[i];
-	};
-
-	phoneString = '';
-	for (i=0; i<phones.length;i++){
-		phoneString += phones[i];
-	};
-
+    //gets current contact
     var currentContact = contacts[contactIndex];
+    
+    //gets the array of address of the current contact
+    var currentAdresses = currentContact.address;
+    
+    var addressString = '';
+    for (i=0;i<currentAdresses.length;i++){
+            addressString += currentAdresses[i].street;
+            addressString += currentAdresses[i].city;
+            addressString += currentAdresses[i].state;
+            addressString += '<br>';
+    }
+
+    //gets the array of address of the current contact
+    var currentPhones = currentContact.phone;
+    
+    var phoneString = '';
+    for (i=0;i<currentPhones.length;i++){
+            phoneString += currentPhones[i];
+            phoneString += '<br>';
+    }
+
     $('#contactShow').html("<b>" + "<h2>" + currentContact.firstName + "</h2>" + "</b>" + "<br>"
     					 + currentContact.firstName + "<br>"
                          + currentContact.lastName + "<br>"
-                         + currentContact.phoneString + "<br>"
-                         + currentContact.addressString);
+                         + phoneString + "<br>"
+                         + addressString);
 }
 
 $(document).ready(function() {
