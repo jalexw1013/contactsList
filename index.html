@@ -2,43 +2,55 @@
 <html lang="en">
 <head>
 	<title>Contacts App</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="practice.css">
 	<meta charset="UTF-8">
 </head>
 <body>
-	<form class='contactForm'>
-		<h1>Contacts</h1>
- 		<h3>Add A Contact</h3>
- 		<label for="firstName">First name</label>
-        	<input type="text" name='firstName' id='firstName' />
+	<div class="container">
+		<form class='contactForm'>
+			<h1>Contacts</h1>
+ 			<h3>Add A Contact</h3>
+ 			<label for="firstName">First name</label>
+        		<input type="text" name='firstName' id='firstName' class='field'/>
 
-		<label for="lastName">Last name</label>
-			<input type="text" name='lastName' id='lastName' />
+			<label for="lastName">Last name</label>
+				<input type="text" name='lastName' id='lastName' class='field' />
 
-		<label for="phone" required>Phone Number</label>
-			<input type='tel' pattern='[0-9/-]*' name='phone' id='phone' />
+			<label for="phone" required>Phone Number</label>
+				<input type='tel' name='phone' id='phone' class='field' />
 
-		<label for="street">Street</label>
-			<input type="text" name='street' id='street' />
+			<label for="street">Street</label>
+				<input type="text" name='street' id='street' class='field' />
 
-		<label for="city">City</label>
-			<input type="text" name='city' id='city' />
+			<label for="city">City</label>
+				<input type="text" name='city' id='city' class='field' />
 
-		<label for="state">State</label>
-			<input type="text" name='state' id='state' />
-    	<button type='submit'>Add</button>
-    </form>
+			<label for="state">State</label>
+				<input type="text" name='state' id='state' class='field' />
+    		<button type='submit' id='submit'>Add</button>
+    	</form>
 
-    <section class='contats'>
-    	<h3>Contacts:</h3>
-    	<ul id='contactList'>
-    		<span class='listInfo'></span>
-    	</ul>
-    </section>
+    	<section class='contacts'>
+    		<h3>Contacts:</h3>
+    		<ul id='contactList'>
+    			<span class='listInfo'></span>
+    		</ul>
+    	</section>
+    </div>
 
-    <section class='viewInfo'>
-    </section>
+    <div id="addBook">
+    	<div class="entry">
+    		<div class="first">pat</div>
+    		<div class="last">jones</div>
+    		<div class="phone">9098765432</div> 
+    		<div class="street">125</div>
+    		<div class="city">nccc</div>
+    		<div class="state">nc</div>
+    	</div>
+    </div>
+
+
     <script src="http://code.jquery.com/jquery.min.js"></script>
-    <script src="app.js"></script>
+    <script src="practice.js"></script>
 </body>
 </html>

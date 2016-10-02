@@ -1,0 +1,66 @@
+body {
+    margin:0px;
+}
+
+.container {
+    width:500px;
+    padding-left:30px;
+}
+
+h1 {
+    padding:10px;
+    border-bottom:2px solid;
+    margin:0px;
+    font-weight:normal;
+}
+
+.contactForm {
+    height:440px;
+    padding:10px;
+}
+
+.contactForm label {
+    position:relative;
+    display:block;
+    width:300px;
+    height:10px;
+    float:left;
+    font-family:sans-serif;
+    font-size:12px;
+    padding:10px;
+    font-weight:bold;
+}
+
+.contactForm input,textarea {
+    width:50%;
+    padding:10px;
+    font-weight:bold;
+    border-radius:5px;
+}
+
+#submit {
+    display: block;
+    padding:10px;
+    margin:20px;
+    border:2px solid black;
+    border-radius:5px;
+    color: white;
+    font-weight: bold;
+    background-color: blue;
+}
+
+.contacts {
+    display: block;
+}
+
+.entry {
+    float: right;
+  margin-left: 20px;
+  width: 300px;
+  height: 300px;
+  border: 2px solid black;
+  display: none;
+  position: fixed;
+  left: 400px;
+  top: 100px;
+}

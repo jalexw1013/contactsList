@@ -38,7 +38,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-.viewInfo {
+#info {
   float: right;
   margin-left: 20px;
   width: 300px;

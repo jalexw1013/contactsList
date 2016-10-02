@@ -1,4 +1,5 @@
 var contacts = [];
+var contactNumber = 0;
 
 var Contact = {
 	firstName: "",
@@ -25,12 +26,28 @@ $(document).ready(function() {
 
 		contacts.push(contact1);
 
-		$('#contactList').append('<li>' + '<span class="listInfo">' + 
-			'<a href="">' + $('#firstName').val() + '</a>' + '</span>' + '</li>');
-		$('.contactForm').children('input').val(" ");
-	});
+		var contactNumber = contacts.length;
 
-	$('li').click(function(e){
-		$('viewInfo').Contact.show();
+		function addToList(cont){
+			for (var i = 0; i < contactNumber; i++){
+				$('#contactList').append('<li>' + '<span class="info">' + '<a href="">' 
+					+ cont.firstName + '</a>' + '</span>' + '</li>');
+			}
+		};
+
+		addToList(contact1);
+
+		$('.contactForm').children('input').val(" ");
+
+		console.log(contactNumber);
 	})
+
+	function addToList(cont){
+		for (var i = 0; i < contactNumber; i++){
+			$('#contactList').append('<li>' + '<span class="info">' + '<a href="">' 
+				+ cont.firstName + '</a>' + '</span>' + '</li>');
+		}
+	};
+
+
 });
