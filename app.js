@@ -10,6 +10,15 @@ var Contact = {
 	state: "",
 }
 
+function showContact(contactIndex) {
+    var currentContact = contacts[contactIndex];
+    $('#contactShow').html(currentContact.firstName + "<br>"
+                         + currentContact.lastName + "<br>"
+                         + currentContact.phone + "<br>"
+                         + currentContact.street + "<br>"
+                         + currentContact.city + "<br>"
+                         + currentContact.state + "<br>");
+}
 
 $(document).ready(function() {
 
@@ -28,26 +37,9 @@ $(document).ready(function() {
 
 		var contactNumber = contacts.length;
 
-		function addToList(cont){
-			for (var i = 0; i < contactNumber; i++){
-				$('#contactList').append('<li>' + '<span class="info">' + '<a href="">' 
-					+ cont.firstName + '</a>' + '</span>' + '</li>');
-			}
-		};
-
-		addToList(contact1);
+		$('#contactList').append('<li>' + '<span class="info">' + '<a href="javascript:void(0)" onClick="showContact(' + (contactNumber - 1) + ');">' + contact1.firstName + '</a>' + '</span>' + '</li>');
 
 		$('.contactForm').children('input').val(" ");
 
-		console.log(contactNumber);
-	})
-
-	function addToList(cont){
-		for (var i = 0; i < contactNumber; i++){
-			$('#contactList').append('<li>' + '<span class="info">' + '<a href="">' 
-				+ cont.firstName + '</a>' + '</span>' + '</li>');
-		}
-	};
-
-
+	});
 });

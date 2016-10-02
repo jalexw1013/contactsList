@@ -1,8 +1,7 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Contacts App</title>
-	<link rel="stylesheet" href="practice.css">
+	<link rel="stylesheet" href="style.css">
 	<meta charset="UTF-8">
 </head>
 <body>
@@ -30,27 +29,20 @@
     		<button type='submit' id='submit'>Add</button>
     	</form>
 
-    	<section class='contacts'>
+    	<section style="display: Box;" class='contacts'>
     		<h3>Contacts:</h3>
     		<ul id='contactList'>
-    			<span class='listInfo'></span>
+    			<span class='info'></span>
     		</ul>
     	</section>
     </div>
 
-    <div id="addBook">
-    	<div class="entry">
-    		<div class="first">pat</div>
-    		<div class="last">jones</div>
-    		<div class="phone">9098765432</div> 
-    		<div class="street">125</div>
-    		<div class="city">nccc</div>
-    		<div class="state">nc</div>
-    	</div>
+    <div class="view info" id="contactShow">
+    	<h3>Contact Information</h3>
     </div>
 
 
     <script src="http://code.jquery.com/jquery.min.js"></script>
-    <script src="practice.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

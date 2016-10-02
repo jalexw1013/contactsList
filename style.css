@@ -38,12 +38,11 @@ h1 {
   margin-bottom: 20px;
 }
 
-#info {
+#contactShow {
   float: right;
   margin-left: 20px;
   width: 300px;
   height: 300px;
-  border: 2px solid black;
   position: fixed;
   left: 400px;
   top: 100px;
